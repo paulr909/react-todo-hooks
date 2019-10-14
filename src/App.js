@@ -1,4 +1,5 @@
 import React, {useReducer} from 'react';
+import DispatchContext from "./DispatchContext";
 import useCombinedReducers from 'use-combined-reducers';
 import initialTodos from "./data/todos";
 import filterReducer from "./reducers/filterReducer";
@@ -6,7 +7,6 @@ import todoReducer from "./reducers/todoReducer";
 import AddTodo from "./components/AddTodo";
 import TodoList from "./components/TodoList";
 import Filter from "./components/Filter";
-import DispatchContext from "./DispatchContext";
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const App = () => {
