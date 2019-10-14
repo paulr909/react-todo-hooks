@@ -21,8 +21,7 @@ const AddTodo = () => {
             <input type="text" value={task} onChange={handleChange}
                    className="form-control" placeholder="Add Todo"/>
             <div className="input-group-append">
-                        <span className="input-group-text"
-                              id="add">Add Todo</span>
+                <span className="input-group-text">Add Todo</span>
             </div>
         </form>
     );
