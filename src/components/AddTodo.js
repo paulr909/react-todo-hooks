@@ -19,7 +19,7 @@ const AddTodo = () => {
     return (
         <form onSubmit={handleSubmit} className="input-group">
             <input type="text" value={task} onChange={handleChange}
-                   className="form-control" placeholder={task}/>
+                   className="form-control" placeholder="Add Todo"/>
             <div className="input-group-append">
                         <span className="input-group-text"
                               id="add">Add Todo</span>
