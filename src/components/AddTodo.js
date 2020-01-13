@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import DispatchContext from "../DispatchContext";
+import { DispatchContext } from "../AppContext";
 import uuid from "uuid/v4";
 
 const AddTodo = () => {

@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
-import DispatchContext from "./DispatchContext";
 import useCombinedReducers from "use-combined-reducers";
+import { DispatchContext, StateContext } from "./AppContext";
 import initialTodos from "./data/todos";
 import filterReducer from "./reducers/filterReducer";
 import todoReducer from "./reducers/todoReducer";
@@ -32,9 +32,11 @@ const App = () => {
       <div className="row">
         <div className="col-md-4 offset-md-4 mt-4">
           <DispatchContext.Provider value={dispatch}>
-            <Filter />
-            <TodoList todos={filteredTodos} />
-            <AddTodo />
+            <StateContext.Provider value={state}>
+              <Filter />
+              <TodoList todos={filteredTodos} />
+              <AddTodo />
+            </StateContext.Provider>
           </DispatchContext.Provider>
         </div>
       </div>

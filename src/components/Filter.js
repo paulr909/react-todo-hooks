@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import DispatchContext from "../DispatchContext";
+import { DispatchContext } from "../AppContext";
 
 const Filter = () => {
   const dispatch = useContext(DispatchContext);
