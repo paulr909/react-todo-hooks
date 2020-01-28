@@ -7,11 +7,11 @@ const AddTodo = () => {
   const [task, setTask] = useState("");
 
   const handleSubmit = event => {
+    event.preventDefault();
     if (task) {
       dispatch({ type: "ADD_TODO", task, id: uuid() });
     }
     setTask("");
-    event.preventDefault();
   };
 
   const handleChange = event => setTask(event.target.value);
