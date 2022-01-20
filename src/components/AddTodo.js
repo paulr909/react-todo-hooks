@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
 import { DispatchContext } from "../AppContext";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 const AddTodo = () => {
   const dispatch = useContext(DispatchContext);
   const [task, setTask] = useState("");
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     if (task) {
       dispatch({ type: "ADD_TODO", task, id: uuidv4() });
@@ -14,7 +14,7 @@ const AddTodo = () => {
     setTask("");
   };
 
-  const handleChange = event => setTask(event.target.value);
+  const handleChange = (event) => setTask(event.target.value);
 
   return (
     <form onSubmit={handleSubmit} className="input-group">

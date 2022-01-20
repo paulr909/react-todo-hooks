@@ -1,7 +1,7 @@
 const todoReducer = (state, action) => {
   switch (action.type) {
     case "DO_TODO":
-      return state.map(todo => {
+      return state.map((todo) => {
         if (todo.id === action.id) {
           return { ...todo, complete: true };
         } else {
@@ -9,7 +9,7 @@ const todoReducer = (state, action) => {
         }
       });
     case "UNDO_TODO":
-      return state.map(todo => {
+      return state.map((todo) => {
         if (todo.id === action.id) {
           return { ...todo, complete: false };
         } else {
@@ -20,7 +20,7 @@ const todoReducer = (state, action) => {
       return state.concat({
         task: action.task,
         id: action.id,
-        complete: false
+        complete: false,
       });
     default:
       return state;

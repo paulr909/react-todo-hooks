@@ -12,12 +12,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const App = () => {
   const [state, dispatch] = useCombinedReducers({
     filter: useReducer(filterReducer, "ALL"),
-    todos: useReducer(todoReducer, initialTodos)
+    todos: useReducer(todoReducer, initialTodos),
   });
 
   const { filter, todos } = state;
 
-  const filteredTodos = todos.filter(todo => {
+  const filteredTodos = todos.filter((todo) => {
     if (filter === "ALL") {
       return true;
     }

@@ -7,7 +7,7 @@ const TodoItem = ({ todo }) => {
   const handleChange = () =>
     dispatch({
       type: todo.complete ? "UNDO_TODO" : "DO_TODO",
-      id: todo.id
+      id: todo.id,
     });
 
   return (
