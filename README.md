@@ -5,11 +5,11 @@
 Install dependencies
 
 ```bash
-yarn install
+npm i
 ```
 
 Run app
 
 ```bash
-yarn start
+npm start
 ```
